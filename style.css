@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::selection {
+  background-color: #E34137; /* Couleur du fond de surlignage */
+  color: #ffffff;
+}
+@font-face {
+    font-family: "nunito";
+    src: url("./assets/fonts/nunito.woff2");
+}
+@font-face {
+    font-family: "justserif";
+    src: url(./assets/fonts/justserif.woff2);
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-family: 'justserif', Helvetica, sans-serif;
+    margin: 1rem;
+    white-space: nowrap;
+    font-size : 2rem
+}
+div{
+    margin: 10px;
+}
+p{
+    margin: 15px;
+}
+nav {
+    background: black;
+    color: white;
+}
+nav ul li a:hover{
+    background-color: #272626;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1rem;
+    display: block;
+}
+footer{
+    width: 100%;
+    position: absolute;
+    inset-block-start: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #000;
+    color: #fff;
+}
+footer a{
+    color: #fff;
+}
+.button{
+    border: solid 1px #000;
+    border-radius: 50px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 10px;
+    font-family: 'justserif', Helvetica, sans-serif;
+    max-width: fit-content;
+    transition: all 0.3s ease-in-out;
+    
+}
+.button:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+@media screen and (min-width: 900px) {
+    #contact-card{
+        display: flex;
+        gap : 15px;
+    }
+    #contact-card div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    #contact-card div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Garde le texte aligné à gauche */
+    }
+    nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    }
+}
+@media screen and (max-width:700px) {
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+    }
+    #contact-card div{
+        margin-top: 30px;
+        display: grid;
+    }
+}
